@@ -3,7 +3,12 @@ guid: c7fba27559cad5a44876cf54a23ef967
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_baloon
+    second: {fileID: 2100000, guid: 353406fe0d7571dc593a62f78283dda8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
