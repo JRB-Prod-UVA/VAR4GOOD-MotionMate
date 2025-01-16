@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Anchor
   - Ball
+  - Balloon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Balloon
   - Water
   - UI
   - 
