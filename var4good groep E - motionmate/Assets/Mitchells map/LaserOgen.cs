@@ -7,6 +7,12 @@ public class LaserOgen : MonoBehaviour
     public float laserLength = 10f;    // Maximum laser distance
     public LayerMask balloonLayer;     // Layer for target objects
 
+    public AudioSource audioSource;    // AudioSource reference to play the sound
+    public AudioClip popSound;         // Single pop sound clip
+
+    public float minPitch = 0.8f;      // Minimum pitch value
+    public float maxPitch = 1.2f;      // Maximum pitch value
+
     void Update()
     {
         // Define laser start and end points
@@ -18,12 +24,28 @@ public class LaserOgen : MonoBehaviour
         {
             endPoint = hit.point; // Adjust endpoint to the hit point
 
-            // Destroy the hit object if it matches the layer
-            Destroy(hit.collider.gameObject);
+            // Check if the balloon has already been processed
+            Balloon balloon = hit.collider.GetComponent<Balloon>();
+            if (balloon != null && !balloon.isPopped)
+            {
+                balloon.isPopped = true; // Mark the balloon as popped
+                PlayRandomPitchSound();
+                Destroy(balloon.gameObject, 0.2f); // Delay the destruction slightly
+            }
         }
 
         // Update the LineRenderer positions
         laserRenderer.SetPosition(0, startPoint); // Start of the laser
         laserRenderer.SetPosition(1, endPoint);  // End of the laser
+    }
+
+    // Method to play the sound with a random pitch
+    private void PlayRandomPitchSound()
+    {
+        // Set a random pitch value
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+
+        // Play the sound
+        audioSource.PlayOneShot(popSound);
     }
 }
