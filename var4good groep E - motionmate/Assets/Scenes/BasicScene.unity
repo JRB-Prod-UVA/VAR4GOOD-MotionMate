@@ -383,9 +383,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bd7d8ac323eb142a90f6cfb0322809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balloonPrefab: {fileID: 2114188420583242699, guid: 39d6901012168ca209ed9a8e99ddd861, type: 3}
+  balloonPrefab: {fileID: 5058597602506250763, guid: 39d6901012168ca209ed9a8e99ddd861, type: 3}
   spawnAreaSize: {x: 25, y: 12.5, z: 12.5}
-  spawnInterval: 1.2
+  spawnIntervalMin: 0.2
+  spawnIntervalMax: 5
   balloonSpeed: 2
   despawnZ: 0
 --- !u!65 &471376132
