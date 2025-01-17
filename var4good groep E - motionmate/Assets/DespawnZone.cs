@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DespawnZone : MonoBehaviour
 {
-    public BallSpawner spawner; // Verwijzing naar het BallSpawner-script
+    public BallSpawn spawner; // Verwijzing naar het BallSpawner-script
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
