@@ -35,5 +35,5 @@ public class BalloonSpawner : MonoBehaviour
         // Spawn weer een ballon na een willekeurige wachttijd
         float randomTime = Random.Range(spawnIntervalMin, spawnIntervalMax);
         Invoke(nameof(SpawnBalloon), randomTime);
+    } // <-- Missing brace added here
 }
-
