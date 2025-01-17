@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7953988052514481366}
   - component: {fileID: 1947320813266422901}
   - component: {fileID: 2668979894989613681}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BalloonSpawn
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
