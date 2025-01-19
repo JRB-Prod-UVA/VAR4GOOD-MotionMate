@@ -7,4 +7,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("BasicScene");
     }
+    // Method to load the Basketball scene
+    public void LoadBasketballScene()
+    {
+        SceneManager.LoadScene("basketbal");
+    }
 }
